@@ -113,7 +113,7 @@ def processar_respostas():
 
 logging.info("Iniciando o scheduler...")
 scheduler = BackgroundScheduler()
-scheduler.add_job(func=processar_respostas, trigger="interval", minutes=30)
+scheduler.add_job(func=processar_respostas, trigger="interval", minutes=60)
 scheduler.start()
 
 atexit.register(lambda: scheduler.shutdown())
